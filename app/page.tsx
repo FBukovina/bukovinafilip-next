@@ -16,8 +16,10 @@ export default function Page() {
         <div className="hero-swoosh" aria-hidden="true" />
       </section>
 
-      <section className="container my-24 text-center">
-        <h2 className="mb-2">Discover how I revamped <span className="text-gradient">branding</span> in companies.</h2>
+      <section className="container my-28 text-center">
+        <h2 className="hero-title text-4xl md:text-6xl font-semibold tracking-tight">
+          Discover how I revamped <span className="text-gradient">branding</span> in companies.
+        </h2>
       </section>
 
       <QnA />
