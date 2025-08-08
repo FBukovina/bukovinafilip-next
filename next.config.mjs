@@ -1,6 +1,4 @@
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
+export default {
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'framerusercontent.com' },
@@ -9,6 +7,4 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'kamenictvibukovina.cz' }
     ]
   }
-}
-
-export default nextConfig
+};
