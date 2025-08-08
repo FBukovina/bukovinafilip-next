@@ -4,22 +4,39 @@ import QnA from '@/components/QnA'
 export default function Page() {
   return (
     <>
-      <section className="container mt-16 grid gap-6">
-        <h1>I'm<br/>Filip,<br/>web designer<br/>and SwiftUI dev.</h1>
-        <p className="text-xl text-neutral-700 max-w-2xl">A web designer with more than 5 years of work.</p>
-        <div className="flex gap-4">
-          <a className="button" href="mailto:hello@bukovinafilip.com">Email Me</a>
-          <a className="button" href="https://calendly.com" target="_blank" rel="noreferrer">Book a Call</a>
+      <section className="relative">
+        <div className="container mt-24 grid gap-6">
+          <h1 className="text-center md:text-left">I'm Filip, web designer and <span className="text-gradient">SwiftUI dev.</span></h1>
+          <p className="text-xl text-neutral-700 max-w-2xl md:text-center md:mx-auto">A web designer with more than 5 years of work.</p>
+          <div className="flex gap-4 justify-center">
+            <span className="pill"><span className="pill-dot"/> I'm available.</span>
+            <a className="button" href="mailto:hello@bukovinafilip.com">Email Me</a>
+          </div>
         </div>
+        <div className="hero-swoosh" aria-hidden="true" />
       </section>
 
-      <section className="container my-24">
-        <h2 className="mb-2">Discover how I revamped branding</h2>
-        <p className="text-neutral-600">in companies.</p>
+      <section className="container my-24 text-center">
+        <h2 className="mb-2">Discover how I revamped <span className="text-gradient">branding</span> in companies.</h2>
       </section>
 
       <QnA />
-      <CTA title="connect now." subtitle="does your website need an upgrade? let's connect." />
+
+      <section className="container my-16">
+        <div className="rounded-[32px] gradient-surface p-10 text-center border shadow-sm">
+          <h2 className="text-4xl font-semibold">connect <span className="lowercase">now.</span></h2>
+          <p className="mt-3 text-neutral-600">does your website need an upgrade? let's connect.</p>
+          <div className="mt-6 flex justify-center">
+            <a className="button" href="mailto:hello@bukovinafilip.com">Email Me</a>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-4 justify-center text-sm text-neutral-600">
+            <a href="https://herohero.co" target="_blank" rel="noreferrer" className="footer-link">Herohero</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="footer-link">LinkedIn</a>
+            <a href="mailto:filip@bukovinafilip.com" className="footer-link">filip@bukovinafilip.com</a>
+            <span>©2025 filip bukovina</span>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
