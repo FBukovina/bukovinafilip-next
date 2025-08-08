@@ -89,3 +89,7 @@ p  { @apply leading-7; }
 .button-outline {
   @apply inline-flex items-center justify-center rounded-full px-5 py-2 border border-neutral-200 bg-white text-neutral-800 hover:border-neutral-300 shadow-sm transition;
 }
+
+/* Reveal animations */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 600ms ease, transform 600ms ease; }
+.reveal.reveal-on { opacity: 1; transform: translateY(0); }

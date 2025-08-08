@@ -12,7 +12,7 @@ export default function ProjectCard({
   href?: string
 }){
   return (
-    <div className="card overflow-hidden">
+    <div className="card overflow-hidden reveal">
       <div className="grid md:grid-cols-[2fr,3fr] gap-0">
         <div className="p-6 flex flex-col gap-2">
           <span className="badge">{kind}</span>

@@ -30,19 +30,17 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="">
-      <div className={`container transition-all duration-300 ${show ? 'h-16 pt-4' : 'h-0 pt-0'}`}>
-        <div className="h-full grid place-items-center">
-          <nav
-            className={`inline-flex items-center gap-1 rounded-full border bg-white/80 backdrop-blur px-1 py-1 shadow-sm transition-all duration-300 ${
-              show ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
-            }`}
-          >
-            <NavItem href="/">Home</NavItem>
-            <NavItem href="/about">About Me</NavItem>
-            <NavItem href="/projects">Projects</NavItem>
-          </nav>
-        </div>
+    <header className="sticky top-4 z-50">
+      <div className="container grid place-items-center">
+        <nav
+          className={`inline-flex items-center gap-1 rounded-full border bg-white/80 backdrop-blur px-1 py-1 shadow-sm transition-all duration-300 ${
+            show ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+          }`}
+        >
+          <NavItem href="/">Home</NavItem>
+          <NavItem href="/about">About Me</NavItem>
+          <NavItem href="/projects">Projects</NavItem>
+        </nav>
       </div>
     </header>
   )
