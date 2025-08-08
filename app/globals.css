@@ -40,7 +40,7 @@ p  { @apply leading-7; }
 
 /* Custom utilities for home design */
 .text-gradient {
-  background: linear-gradient(90deg, #43c6ac 0%, #f8ffae 50%, #f78ca0 100%);
+  background: linear-gradient(90deg, #43c6ac 0%, #cfc3ad 55%, #f08778 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -61,8 +61,8 @@ p  { @apply leading-7; }
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -6rem;
-  height: 24rem;
+  bottom: -5rem;
+  height: 22rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 96rem;
@@ -73,4 +73,19 @@ p  { @apply leading-7; }
 
 .gradient-surface {
   background: linear-gradient(180deg, rgba(67,198,172,0.35) 0%, rgba(67,198,172,0.25) 50%, rgba(255,255,255,0.65) 100%);
+}
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 3.2vw + 2rem, 5.5rem);
+}
+
+.hero-subtitle {
+  @apply text-xl text-neutral-700;
+}
+
+.button-outline {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2 border border-neutral-200 bg-white text-neutral-800 hover:border-neutral-300 shadow-sm transition;
 }

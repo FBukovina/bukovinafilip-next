@@ -5,12 +5,12 @@ export default function Page() {
   return (
     <>
       <section className="relative">
-        <div className="container mt-24 grid gap-6">
-          <h1 className="text-center md:text-left">I'm Filip, web designer and <span className="text-gradient">SwiftUI dev.</span></h1>
-          <p className="text-xl text-neutral-700 max-w-2xl md:text-center md:mx-auto">A web designer with more than 5 years of work.</p>
-          <div className="flex gap-4 justify-center">
+        <div className="container mt-28 grid gap-6">
+          <h1 className="hero-title text-center">I'm Filip, web designer and <span className="text-gradient">SwiftUI dev.</span></h1>
+          <p className="hero-subtitle text-center max-w-2xl mx-auto">A web designer with more than 5 years of work.</p>
+          <div className="flex flex-col items-center gap-4 mt-2">
             <span className="pill"><span className="pill-dot"/> I'm available.</span>
-            <a className="button" href="mailto:hello@bukovinafilip.com">Email Me</a>
+            <a className="button-outline" href="mailto:hello@bukovinafilip.com">Email Me</a>
           </div>
         </div>
         <div className="hero-swoosh" aria-hidden="true" />
