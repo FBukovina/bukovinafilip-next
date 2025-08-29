@@ -3,7 +3,16 @@ import QnA from '@/components/QnA'
 import CTA from '@/components/CTA'
 import Reveal from '@/components/Reveal'
 
-const projects = [
+type Project = {
+  title: string
+  kind: 'App' | 'Web'
+  segment: string
+  description: string
+  href: string
+  image: string
+}
+
+const projects: Project[] = [
   {
     kind: 'App',
     segment: 'B2C',
