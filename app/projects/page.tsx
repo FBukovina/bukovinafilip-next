@@ -1,16 +1,19 @@
 import ProjectCard from '@/components/ProjectCard'
+import FeaturedProjectCard from '@/components/FeaturedProjectCard'
 import QnA from '@/components/QnA'
 import CTA from '@/components/CTA'
 import Reveal from '@/components/Reveal'
 
-type Project = {
+type BaseProject = {
   title: string
   kind: 'App' | 'Web'
   segment: string
-  description: string
   href: string
-  image: string
 }
+
+type Project =
+  | (BaseProject & { description: string; image: string; featured?: false })
+  | (BaseProject & { tagline: string; featured: true })
 
 const projects: Project[] = [
   {
@@ -25,9 +28,9 @@ const projects: Project[] = [
     kind: 'App',
     segment: 'Discontinued',
     title: 'Quip Social',
-    description: 'Social media network app built by me. Using Firebase API and Swift.',
     href: 'https://quip.bukovinafilip.com/',
-    image: 'https://framerusercontent.com/images/QpDJdFJL45TBBxqpCJHRmuB3cQ.png',
+    tagline: 'Discover K-Pop concerts in your country.',
+    featured: true,
   },
   {
     kind: 'Web',
@@ -58,7 +61,24 @@ export default function Page(){
       <section className="container grid gap-8 md:grid-cols-2">
         {projects.map((project, idx) => (
           <Reveal key={project.title} delayMs={idx * 80}>
-            <ProjectCard {...project} />
+            {'featured' in project && project.featured ? (
+              <FeaturedProjectCard
+                title={project.title}
+                kind={project.kind}
+                segment={project.segment}
+                href={project.href}
+                tagline={project.tagline}
+              />
+            ) : (
+              <ProjectCard
+                title={project.title}
+                kind={project.kind}
+                segment={project.segment}
+                description={project.description}
+                href={project.href}
+                image={project.image}
+              />
+            )}
           </Reveal>
         ))}
       </section>
