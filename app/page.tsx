@@ -1,4 +1,3 @@
-import CTA from '@/components/CTA'
 import QnA from '@/components/QnA'
 import Reveal from '@/components/Reveal'
 
@@ -6,6 +5,7 @@ export default function Page() {
   return (
     <>
       <section className="relative">
+        <div className="hero-swoosh" aria-hidden="true" />
         <div className="container mt-28 grid gap-6">
           <Reveal>
             <h1 className="hero-title text-center">I'm Filip, web designer and <span className="text-gradient">SwiftUI dev.</span></h1>
@@ -20,7 +20,6 @@ export default function Page() {
             </div>
           </Reveal>
         </div>
-        <div className="hero-swoosh" aria-hidden="true" />
       </section>
 
       <section className="container my-28 text-center">
