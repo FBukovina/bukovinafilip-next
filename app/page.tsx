@@ -4,7 +4,7 @@ import Reveal from '@/components/Reveal'
 export default function Page() {
   return (
     <>
-      <section className="relative">
+      <section>
         <div className="hero-swoosh" aria-hidden="true" />
         <div className="container mt-28 grid gap-6">
           <Reveal>
